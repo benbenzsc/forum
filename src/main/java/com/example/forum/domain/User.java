@@ -1,18 +1,18 @@
 package com.example.forum.domain;
 
-public class UserLogin {
+public class User {
     private Integer userId;
-    private String userName;
+    private String user_name;
     private String userEmail;
     private String userPassword;
     private String userCookie;
 
-    public UserLogin() {
+    public User() {
     }
 
-    public UserLogin(Integer userId, String userName, String userEmail, String userPassword, String userCookie) {
+    public User(Integer userId, String user_name, String userEmail, String userPassword, String userCookie) {
         this.userId = userId;
-        this.userName = userName;
+        this.user_name = user_name;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userCookie = userCookie;
@@ -26,12 +26,12 @@ public class UserLogin {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getUserEmail() {
@@ -60,9 +60,9 @@ public class UserLogin {
 
     @Override
     public String toString() {
-        return "UserLogin{" +
+        return "User{" +
                 "userId=" + userId +
-                ", userName='" + userName + '\'' +
+                ", user_name='" + user_name + '\'' +
                 ", userEmail='" + userEmail + '\'' +
                 ", userPassword='" + userPassword + '\'' +
                 ", userCookie='" + userCookie + '\'' +

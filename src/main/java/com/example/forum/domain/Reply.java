@@ -9,9 +9,9 @@ public class Reply {
     private Integer userId;
     private String commentText;
     private LocalDateTime commentDatetime;
-    private PostTitle postTitle;
-    private UserLogin replyUserLogin;
-    private UserLogin userLogin;
+    private Post post;
+    private User replyUser;
+    private User user;
 
     public Reply() {
     }
@@ -25,13 +25,13 @@ public class Reply {
         this.commentDatetime = commentDatetime;
     }
 
-    public Reply(Integer replyId, String commentText, LocalDateTime commentDatetime, PostTitle postTitle, UserLogin replyUserLogin, UserLogin userLogin) {
+    public Reply(Integer replyId, String commentText, LocalDateTime commentDatetime, Post post, User replyUser, User user) {
         this.replyId = replyId;
         this.commentText = commentText;
         this.commentDatetime = commentDatetime;
-        this.postTitle = postTitle;
-        this.replyUserLogin = replyUserLogin;
-        this.userLogin = userLogin;
+        this.post = post;
+        this.replyUser = replyUser;
+        this.user = user;
     }
 
     public Integer getReplyId() {
@@ -82,28 +82,28 @@ public class Reply {
         this.commentDatetime = commentDatetime;
     }
 
-    public PostTitle getPostTitle() {
-        return postTitle;
+    public Post getPost() {
+        return post;
     }
 
-    public void setPostTitle(PostTitle postTitle) {
-        this.postTitle = postTitle;
+    public void setPost(Post post) {
+        this.post = post;
     }
 
-    public UserLogin getReplyUserLogin() {
-        return replyUserLogin;
+    public User getReplyUser() {
+        return replyUser;
     }
 
-    public void setReplyUserLogin(UserLogin replyUserLogin) {
-        this.replyUserLogin = replyUserLogin;
+    public void setReplyUser(User replyUser) {
+        this.replyUser = replyUser;
     }
 
-    public UserLogin getUserLogin() {
-        return userLogin;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserLogin(UserLogin userLogin) {
-        this.userLogin = userLogin;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
@@ -115,9 +115,9 @@ public class Reply {
                 ", userId=" + userId +
                 ", commentText='" + commentText + '\'' +
                 ", commentDatetime=" + commentDatetime +
-                ", postTitle=" + postTitle +
-                ", replyUserLogin=" + replyUserLogin +
-                ", userLogin=" + userLogin +
+                ", post=" + post +
+                ", replyUser=" + replyUser +
+                ", user=" + user +
                 '}';
     }
 }
